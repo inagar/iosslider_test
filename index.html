@@ -22,21 +22,22 @@
 		<script type="text/javascript">
 			$(document).ready(function() {
 				
-				$('.iosSlider').iosSlider({
+				slider = $('.iosSlider').iosSlider({
 					snapToChildren: true,
 					desktopClickDrag: true,
 					infiniteSlider: true
 				});
 
 				$('.next').on('click', function(){
-					var currentSlide = this.slider.data('args').currentSlideNumber;
+					debugger;
+					var currentSlide = slider.data('args').currentSlideNumber;
     			var nextSlide = currentSlide + 2;
 
     			$('.iosSlider').iosSlider('goToSlide', nextSlide);
 				});
 
 				$('.prev').on('click', function() {
-					var currentSlide = this.slider.data('args').currentSlideNumber;
+					var currentSlide = slider.data('args').currentSlideNumber;
 			    var prevSlide = currentSlide - 2;
 
 			    $('.iosSlider').iosSlider('goToSlide', prevSlide);
